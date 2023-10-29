@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Готовые фирмы</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<script src="npm/vue@2.6.14"></script>
+ <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body style="overflow-x: hidden;">
+    <div id="app">
+
+<!-- компоненты vue js-->
+<menu-mobile></menu-mobile>
+<menu-desktop></menu-desktop>
+<!-- компоненты vue js-->
+
+
+    	
+    	
+    	
+    	
+
+
+ 
+ <div class="container">
+ 	<h1 class="h1first">Готовые фирмы с лицензией</h1>
+ 	<p class="pfirst">
+ 		Решение бизнесмена купить готовую фирму – выгодный коммерческий ход, который позволит быстро начать работу в выбранной сфере и достичь запланированного уровня товарооборота в короткие сроки. Консультационный Центр выполняет срочное оформление ООО, ЗАО и иных организационно-правовых форм бизнеса на легальной основе. Клиентам предлагаются выгодные цены, гарантия юридической чистоты процедуры, а также консультации юристов с опытом работы более 17 лет.
+ 	 </p>
+
+<h1 class="h1first">Почему выгодно купить готовую фирму с лицензией</h1>
+<p class="pfirst mb-5">
+	Большую часть прибыли лицензированные предприятия получают с крупных госзаказов и тендеров. Такие предложения ограничены по времени, и это может стать проблемой, так как на оформление лицензии уходит от 2 месяцев и более. Продажа готовых фирм с лицензиями – подходящий выход из ситуации. Такое решение экономит время, даёт возможность получить прибыль и сократить расходы на организационные процессы.
+	</p>
+ </div>
+
+<div class="container" id="company">
+ <div class="table-responsive">
+ 	<table class="table table-borderless">
+  <thead>
+    <tr class="table-active">
+      <th>№ <br>
+	П/П</th>
+	<th>
+		Форма <br>
+собственности
+	</th>
+	<th>
+		Наличие  <br>
+оборотов
+	</th>
+	<th>
+		Год <br>
+создания
+	</th>
+	<th>
+		Лицензии <br>
+	</th>
+	<th>
+		Срок <br>
+действия
+	</th>
+	<th>
+		Цена(руб)
+
+	</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>1</td>
+      <td>ООО, <br>
+Москва</td>
+      <td>Да</td>
+      <td>2017</td>
+      <td>
+      	Лицензия ФСБ на работу со сведениями, составляющими гостайну
+
+
+
+      </td>
+      <td>
+      	Февраль 2027
+      	
+      </td>
+      <td>
+      	5 500 000
+      </td>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td>Лицензия ФСБ на оказание услуг в области защиты гостайны. Свое режимно-секретное подразделение</td>
+    	<td>Февраль 2027</td>
+    </tr>
+    <tr>
+    	<td>2</td>
+    	<td>ООО, <br>
+Москва</td>
+<td>Да</td>
+<td>2021</td>
+<td>Лицензия ФСБ на работу со сведениями, составляющими гостайну</td>
+<td>Ноябрь 2025</td>
+<td>3 200 000</td>
+    </tr>
+    <tr>
+    	<td>3</td>
+    	<td>ЗАО, <br>
+Московская область</td>
+<td>Да</td>
+<td>2001</td>
+<td>Лицензия ФСТЭК России на деятельность по технической защите конфиденциальной информации
+(все пункты кроме мониторинг)
+
+
+
+</td>
+<td>Бессрочно
+
+</td>
+<td>5 000 000</td>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td>Лицензия ФСТЭК России на деятельность по разработке и производству средств защиты конфиденциальной информации
+(все пункты)</td>
+<td>Бессрочно</td>
+<td></td>
+    </tr>
+  </tbody>
+</table>
+
+ </div>
+</div>
+    		
+<div class="container" id="special">
+	<h1 class="h1first">Заполните заявку онлайн</h1>
+	
+  <div class="row">
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput1" class="form-label"></label>
+    <input v-model="service" type="input" class="form-control input-custom" id="exampleInput1" placeholder="Какая услуга вас интересует?">
+  </div>
+
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput4" class="form-label"></label>
+    <input v-model="name" type="input" class="form-control input-custom" id="exampleInput4" placeholder="Ваше имя*">
+  </div>
+ 
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputEmail1" class="form-label"></label>
+    <input v-model="email" type="email" class="form-control input-custom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail*">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputphone1" class="form-label"></label>
+    <input v-model="phone" type="number" class="form-control input-custom" id="exampleInputphone1" aria-describedby="emailHelp" placeholder="Телефон">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail7" class="form-label"></label>
+    <textarea v-model="comment" class="form-control input-custom input-textarea" aria-label="With textarea" id="exampleInputEmail7" placeholder="Коментарий"></textarea>
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+   </div>
+  <div class="mb-3 form-check">
+    <input v-model="checked" type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Нажимая кнопку «ОТПРАВИТЬ ЗАЯВКУ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</label>
+  </div>
+  <button v-on:click="Sendemail" class="btn btn-primary btn-custom mt-2 mb-5 btn-footer" style="padding: 10px;">Оставить заявку</button>
+
+</div>
+<div id="contact"></div>
+
+<!-- vue js компоненты -->
+
+<footer-desktop></footer-desktop>
+
+<footer-mobile></footer-mobile>
+
+<!-- vue js компоненты -->
+
+    </div>
+    <script src="js/axios/dist/axios.min.js"></script>
+    <script src="js/bootstrap5.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89546646, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89546646" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  </body>
+</html>

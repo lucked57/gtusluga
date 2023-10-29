@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Готовые фирмы</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<script src="npm/vue@2.6.14"></script>
+ <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body style="overflow-x: hidden;">
+    <div id="app">
+
+<!-- компоненты vue js-->
+<menu-mobile></menu-mobile>
+<menu-desktop></menu-desktop>
+<!-- компоненты vue js-->
+
+
+    	
+    	
+    	
+    	
+
+
+ 
+ <div class="container">
+ 	<div class="row">
+  <div class="col-md-7 col-12 px-md-5">
+    <h1 class="h1first">Мы за перспективное сотрудничество! Мы всегда открыты к предложениям </h1>
+    <p class="pfirst mt-5">
+    Заинтересованы в сотрудничестве? оставтье заявку с темой «Сотрудничество». Мы свяжемся с вами для обсуждения вопросов.
+    </p>
+    </div>
+    <div class="col-md-5 col-12">
+
+<p class="pfirst mt-3">
+Партнеры получают все конкурентные преимущества компании, которые мы нарабатывали годами:
+
+    
+    
+    
+    
+    
+    
+    
+
+    <ul>
+    <li style="color: #2E4A9A;"><span style="color: #000000;">Аккредитованные органы по сертификации</span></li>
+    <li style="color: #2E4A9A;">
+      <span style="color: #000000;">Собственные испытательные лаборатории с новейшим оборудованием</span>
+  </li>
+     <li style="color: #2E4A9A;">
+      <span style="color: #000000;">Более 500 специалистов и 60 аккредитованных экспертов в различных областях сертификации</span>
+     
+ </li>
+    <li style="color: #2E4A9A;">
+      <span style="color: #000000;">Прямое сотрудничество с государственными органами и ведущими НИИ</span>
+    
+</li>
+
+<li style="color: #2E4A9A;">
+      <span style="color: #000000;">Строгое соответствие действующему законодательству РФ</span>
+    
+</li>
+
+<li style="color: #2E4A9A;">
+      <span style="color: #000000;">Юридическое постпродажное сопровождение документов</span>
+    
+</li>
+
+<li style="color: #2E4A9A;">
+      <span style="color: #000000;">Компания полного цикла — выстраиваем работу с нуля до конечного результата</span>
+    
+</li>
+
+
+     
+     
+    </ul>
+
+</p>
+      </div>
+</div>
+ </div>
+
+
+    		
+<div class="container" id="special">
+	<h1 class="h1first">Заполните заявку онлайн</h1>
+	
+  <div class="row">
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput1" class="form-label"></label>
+    <input v-model="service" type="input" class="form-control input-custom" id="exampleInput1" placeholder="Какая услуга вас интересует?">
+  </div>
+
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput4" class="form-label"></label>
+    <input v-model="name" type="input" class="form-control input-custom" id="exampleInput4" placeholder="Ваше имя*">
+  </div>
+ 
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputEmail1" class="form-label"></label>
+    <input v-model="email" type="email" class="form-control input-custom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail*">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputphone1" class="form-label"></label>
+    <input v-model="phone" type="number" class="form-control input-custom" id="exampleInputphone1" aria-describedby="emailHelp" placeholder="Телефон">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail7" class="form-label"></label>
+    <textarea v-model="comment" class="form-control input-custom input-textarea" aria-label="With textarea" id="exampleInputEmail7" placeholder="Коментарий"></textarea>
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+   </div>
+  <div class="mb-3 form-check">
+    <input v-model="checked" type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Нажимая кнопку «ОТПРАВИТЬ ЗАЯВКУ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</label>
+  </div>
+  <button v-on:click="Sendemail" class="btn btn-primary btn-custom mt-2 mb-5 btn-footer" style="padding: 10px;">Оставить заявку</button>
+
+</div>
+<div id="contact"></div>
+
+<!-- vue js компоненты -->
+
+<footer-desktop></footer-desktop>
+
+<footer-mobile></footer-mobile>
+
+<!-- vue js компоненты -->
+
+    </div>
+    <script src="js/axios/dist/axios.min.js"></script>
+    <script src="js/bootstrap5.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89546646, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89546646" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  </body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Эксперт</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<script src="npm/vue@2.6.14"></script>
+ <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body style="overflow-x: hidden;">
+    <div id="app">
+<!--<nav class="navmobile">
+	<div class="row">
+	<div class="col">
+		<img class="logo p-2" src="img/logo.png" alt="">
+	</div>
+	<div onclick="menuMobile()" class="col align-self-end px-4 navbrand" style="border: none; font-size: 1.8rem;">
+		<div class="text-end">
+			<svg  class="ham hamRotate ham4" viewBox="0 0 100 100" width="80">
+  <path
+        class="line top"
+        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+  <path
+        class="line middle"
+        d="m 70,50 h -40" />
+  <path
+        class="line bottom"
+        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+</svg>
+
+			
+		</div>
+		
+	</div>
+	<div class="collapsemenu menutoggle" >
+		<div class="firstmenu text-white text-center">
+			<a href="#special" style="text-decoration: none;"><p class="my-1 py-2 text-white">Оставить заявку</p></a>
+
+		</div>
+		<div class="row">
+			<div class="col menutext text-nowrap">
+			<a href="#license">Лицензии</a>
+			</div>
+			<div class="col px-5 mt-1">
+				<div class="text-end"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr>
+			<div class="col menutext text-nowrap">
+			
+			<a href="#company">Готовые фирмы</a>
+			</div>
+			<div class="col px-5 mt-1">
+				<div class="text-end"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr>
+			<div class="col menutext text-nowrap">
+				<a href="#special">Специальные предложения</a>
+			
+			</div>
+			<div class="col px-5 mt-1">
+				<div class="text-end"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr>
+			<div class="col menutext text-nowrap">
+				<a href="#special">Сотрудничество</a>
+			
+			</div>
+			<div class="col px-5 mt-1">
+				<div class="text-end"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr>
+			<div class="col menutext text-nowrap">
+			
+			<a href="#contact">Контакты</a>
+			</div>
+			<div class="col px-5 mt-1">
+				<div class="text-end"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr>
+			<div class="col px-5 mt-1 mb-4">
+				<a class="phone" href="tel:8(800)999-99-99">8 (800)999-99-99</a>
+			</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>-->
+<!--<nav class="navdestop">
+	<div class="container">
+	<div class="row my-3 align-items-center">
+	<div class="col">
+		<img class="logo" src="img/logo.png" alt="">
+	</div>
+	<div class="col">
+		<div class="text-end mx-5">
+		<a class="phone" href="tel:8(800)999-99-99">8 (800)999-99-99</a>
+		<a href="#special" class="btn btn-outline-primary" style="margin-left: 30px; border-radius: 30px; border: 0.523116px solid #172858;color: #172858;">Оставить заявку</a>
+		</div>
+	</div>
+	</div>
+	</div>
+	<hr>
+	<div class="container">
+		
+	<div class="row  text-desctop text-nowrap">
+		<div class="col">
+			
+			<a href="#license"><p>Лицензия</p></a>
+		</div>
+		<div class="col">
+			<a href="#company"><p>Готовые фирмы</p></a>
+			
+		</div>
+		<div class="col">
+			<a href="#special"><p>Специальные предложения</p></a>
+			
+		</div>
+		<div class="col mr-l-text">
+			<a href="#special"><p>Сотрудничество</p></a>
+			
+		</div>
+		<div class="col mx-5">
+			<a href="#contact" style="text-align: right;"><p>Контакты</p></a>
+		</div>
+	</div>
+	</div>
+</nav>-->
+
+<!-- компоненты vue js-->
+<menu-mobile></menu-mobile>
+<menu-desktop></menu-desktop>
+<!-- компоненты vue js-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner h-custom">
+    <div class="carousel-item active" >
+    	<!-- img-black-->
+      <img src="img/slide1.jpg" class="d-block w-100" alt="...">
+   
+      <div class="carousel-caption">
+      <h5>Лицензии федеральных служб России</h5>
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/slide2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+      
+        <h5>Покупайте уже готовые фирмы</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/slide3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        
+        <h5>Нам доверяют компании 
+по всей стране</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+    	<div class="container" id="license">
+    		<h1 class="h1first">Лицензии федеральных служб России</h1>
+    		<p class="pfirst">Лицензии федеральных служб России представляют собой официальный документ, дающий разрешение на выполнение работ в различной области, в том числе работ с данными, которые являются государственной тайной или конфиденциальной информацией.</p>
+    		<h1 class="h1first">К таким документам относятся:</h1>
+    		<div class="col-12 col-md-6">
+    		<div class="infofirst">
+    			<p class="pinfo" style="font-size: 12px;">Лицензии Федеральной службы безопасности (ФСБ) России и Федеральной службы по техническому и экспортному контролю (ФСТЭК) России</p>
+    		</div>
+    		</div>
+    		<a class="btn btn-primary btn-custom my-3" href="#special">Оставить заявку</a>
+    	</div>
+    	<div style="background: #F9F9F9;">
+    		<div class="container">
+    			<div class="row">
+	    			<div class="col-6 col-xl-2">
+	    			<img class="img-ser" src="img/pixlr-bg-result 1.png" alt="">
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">Консультация со специалистом</p>
+	    			</div>
+	    			<div class="col-6 col-xl-2 mx-md-3">
+	    				<i class="fa-solid fa-arrow-right-long d-none d-lg-block"></i>
+	    			<img class="img-ser" src="img/pixlr-bg-result(1) 1.png" alt="">
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">Подготовка пакета документов</p>
+	    			</div>
+	    			<div class="col-6 col-xl-2 mx-md-3">
+	    				<i class="fa-solid fa-arrow-right-long d-none d-lg-block"></i>
+	    			<img class="img-ser" src="img/pixlr-bg-result(2) 1.png" alt="">
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">Подача пакета документов</p>
+	    			</div>
+	    			<div class="col-6 col-xl-2 mx-md-3">
+	    				<i class="fa-solid fa-arrow-right-long d-none d-lg-block"></i>
+	    			<img class="img-ser" src="img/pixlr-bg-result(3) 1.png" alt="">
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">Оплата по договору оказания услуг</p>
+	    			</div>
+	    			<div class="col col-xl-2 mx-md-3">
+	    				<i class="fa-solid fa-arrow-right-long d-none d-lg-block"></i>
+	    			<img class="img-ser" src="img/pixlr-bg-result(1) 1.png" alt="">
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">Предоставление </p>
+	    			<p class="text-center" style="color: #000000;font-weight: 700;">лицензии </p>
+	    			</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<h1 class="h1first">Получение лицензии ФСБ</h1>
+    		<p class="pfirst">Специлисты нашей компании готовы предложить услуги по полному юридическому сопровождению  в   получении лицензий Федеральной службы безопасности России и Федеральной службы по техническому и экспортному контролю России:</p>
+    		<h1 class="h2first">Лицензия ФСБ на работу со сведениями, составляющими государственную тайну (Лицензия ФСБ на гостайну):</h1>
+    		<p class="pfirst">разрешительный документ, дающий право на осуществление деятельности предприятий, учреждений и организаций по проведению работ, связанных с использованием сведений, составляющих государственную тайну, созданием средств защиты информации, а также с осуществлением мероприятий и (или) оказанием услуг по защите государственной тайны. (в соответствии с постановлением правительства России 333 от 15.04. 1995 г.)</p>
+ <h1 class="h2first">Лицензия ФСБ на криптографию (шифрование):</h1>
+<p class="pfirst">разрешительный документ, дающий право на деятельность по разработке, производству, распространению шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем. (в соответствии с постановлением правительства России 313 от 16.04.2012 г.)</p>
+ <h1 class="h2first">Лицензия ФСБ на криптографию (шифрование):</h1>
+<p class="pfirst">разрешительный документ, дающий право на деятельность по разработке, производству, распространению шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем. (в соответствии с постановлением правительства России 333 от 15.04. 1995 г.)</p>
+
+
+
+
+ 
+ 		<div class="row">
+
+ 			<div class="col-12 col-xl-6 mb-3">
+ 				<div class="infofirst infofirst4" style="border-radius: 30px;">
+ 				<h2>Лицензия ФСБ на гостайну</h2>
+ 						<hr>
+ 						<div class="row">
+ 							<div class="col-6">
+ 								<p class="text-pr">Стоимость:</p>                                   
+								<p class="text-pr">Срок оформления:</p>                     
+ 							</div>
+ 							<div class="col-6">
+ 								<p class="text-pr" style="color: #172858;">от 1 500 000 рублей</p>
+ 								<p class="text-pr" style="color: #172858;">от 3 месяцев</p>
+ 							</div>
+ 						</div>
+ 			</div>
+ 			</div>
+                     
+ 			<div class="col-12 col-xl-6 mb-3">
+ 				<div class="infofirst infofirst4" style="border-radius: 30px;">
+ 				<h2>Лицензия ФСБ на криптографию (шифрование) (333)</h2>
+ 						<hr>
+ 						<div class="row">
+ 							<div class="col-6">
+ 								<p class="text-pr">Стоимость:</p>                                   
+								<p class="text-pr">Срок оформления:</p>                     
+ 							</div>
+ 							<div class="col-6">
+ 								<p class="text-pr" style="color: #172858;">от 900 000 рублей</p>
+ 								<p class="text-pr" style="color: #172858;">от 2 месяцев</p>
+ 							</div>
+ 						</div>
+ 			</div>
+ 			</div>
+
+ 			<div class="col-12 col-xl-6 mb-3">
+ 				<div class="infofirst infofirst4" style="border-radius: 30px;">
+ 				<h2>Лицензия ФСБ на криптографию (шифрование) (313)</h2>
+ 						<hr>
+ 						<div class="row">
+ 							<div class="col-6">
+ 								<p class="text-pr">Стоимость:</p>                                   
+								<p class="text-pr">Срок оформления:</p>                     
+ 							</div>
+ 							<div class="col-6">
+ 								<p class="text-pr" style="color: #172858;">от 700 000 рублей</p>
+ 								<p class="text-pr" style="color: #172858;">2 месяца</p>
+ 							</div>
+ 						</div>
+ 			</div>
+ 			</div>
+
+ 			<div class="col-12 col-xl-6 mb-3">
+ 				<div class="infofirst infofirst4" style="border-radius: 30px;">
+ 				<h2>Лицензия ФСТЭК (ТЗКИ и СЗКИ)</h2>
+ 						<hr>
+ 						<div class="row">
+ 							<div class="col-6">
+ 								<p class="text-pr">Стоимость:</p>                                   
+								<p class="text-pr">Срок оформления:</p>                     
+ 							</div>
+ 							<div class="col-6">
+ 								<p class="text-pr" style="color: #172858;">от 800 000 рублей</p>
+ 								<p class="text-pr" style="color: #172858;">3 месяца</p>
+ 							</div>
+ 						</div>
+ 			</div>
+ 			</div>
+    		</div>
+
+
+    		
+    		<img class="w-100" src="img/Group 10203.png" alt="">
+
+    		</div>
+    	
+<div style="background: #F9F9F9;">
+    			<div class="container">
+    				<p class="pfirst pt-4">Наши специалисты готовы предоставить помощь в получении лицензий ФСТЭК (Федеральная служба по техническому и экспортному контролю России) на деятельности:</p>
+    				<p class="pfirst">- по технической защите конфиденциальной информации (ТЗКИ)</p>
+<p class="pfirst">- по разработке и производству средств защиты конфиденциальной информации (СЗКИ)</p>
+<p class="pfirst" style="font-weight:900;">Лицензия на деятельность ТЗКИ
+ - разрешительный документ на осуществление деятельности по технической защите конфиденциальной информации, в сответсвии со следующими пунктами:</p>
+<p class="pfirst">А) Услуги по контролю защищенности конфиденциальной информации от утечки по техническим каналам:</p>
+<p class="pfirst">
+	<ul>
+		<li style="color: #2E4A9A;"><span style="color: #000000;">в средствах и системах информатизации</span></li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">в технических средствах (системах), не обрабатывающих конфиденциальную информацию, но размещенных в помещениях, где она обрабатывается</span>
+	</li>
+     <li style="color: #2E4A9A;">
+     	<span style="color: #000000;">в помещениях со средствами (системами), подлежащими защите</span>
+     
+ </li>
+    <li style="color: #2E4A9A;">
+    	<span style="color: #000000;">в помещениях, предназначенных для ведения конфиденциальных переговоров (далее - защищаемые помещения)</span>
+    
+</li>
+     
+     
+    </ul>
+    </p>
+    <p class="pfirst">
+Б) Услуги по контролю защищенности конфиденциальной информации от несанкционированного доступа и ее модификации в средствах и системах информатизации </p>
+ <p class="pfirst">В) Услуги по мониторингу информационной безопасности средств и систем информатизации</p>
+<p class="pfirst">Г) Работы и услуги по аттестационным испытаниям и аттестации на соответствие требованиям по защите информации:</p>
+<p class="pfirst">
+	<ul>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				средств и систем информатизации 
+				</span>
+			</li>
+
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				помещений со средствами (системами) информатизации, подлежащими защите 
+				</span>
+			</li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				защищаемых помещений 
+				</span>
+			</li>
+	</ul>
+    
+     
+     
+</p>
+<p class="pfirst">Д) Работы и услуги по проектированию в защищенном исполнении:</p>
+<ul>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				средств и систем информатизации 
+				</span>
+			</li>
+
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				помещений со средствами (системами) информатизации, подлежащими защите 
+				</span>
+			</li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				защищаемых помещений 
+				</span>
+			</li>
+	</ul>
+     
+
+<p class="pfirst">Е) Услуги по установке, монтажу, наладке, испытаниям, ремонту средств защиты информации:</p>
+<ul>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				технических средств защиты информации  
+				</span>
+			</li>
+
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				защищенных технических средств обработки информации 
+				</span>
+			</li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				технических средств контроля эффективности мер защиты информации 
+				</span>
+			</li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				программных (программно-технических) средств защиты информации  
+				</span>
+			</li>
+
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				защищенных программных (программно-технических) средств обработки информации 
+				</span>
+			</li>
+		<li style="color: #2E4A9A;">
+			<span style="color: #000000;">
+				 программных (программно-технических) средств контроля эффективности защиты информации 
+				</span>
+			</li>
+	</ul>
+    
+     
+     <p class="pfirst" style="font-weight:900;">Лицензия на деятельность СЗКИ - разрешительный документ на осуществление деятельности по разработке и производству средств защиты конфиденциальной информации, в соответсвии со следующими пунктами: </p>
+    <p class="pfirst">1) Разработка средств защиты конфиденциальной информации, в том числе:
+    технических средств защиты информации защищенных технических средств обработки информации технических средств контроля эффективности мер защиты информации программных (программно-технических) средств защиты информации защищенных программных (программно-технических) средств обработки информации программных (программно-технических) средств контроля защищенности информации </p>
+    <p class="pfirst">2) производство средств защиты конфиденциальной информации, в том числе:
+    технических средств защиты информации защищенных технических средств обработки информации технических средств контроля эффективности мер защиты информации программных (программно-технических) средств защиты информации защищенных программных (программно-технических) средств обработки информации программных (программно-технических) средств контроля защищенности информации </p>
+
+
+    
+    <a class="btn btn-primary btn-custom mt-2 mb-5" href="#special">Оставить заявку</a>
+
+    			</div>
+<div style="background: #ffffff;">
+ <img class="w-100" src="img/Group 10194.png" alt="">
+ 
+ <div class="container">
+ 	<h1 class="h1first">Лицензия ФСБ на осуществление мероприятий в области защиты государственной тайны</h1>
+ 	<p class="pfirst">Лицензия включает следующие пункты: </p>
+
+<p class="pfirst">– Техническое обслуживание (монтаж, наладка, установка, сервисное обслуживание, ремонт) защищенных с использованием шифровальных средств информационных систем, систем и комплексов телекоммуникаций;</p>
+
+<p class="pfirst">– Распространение (продажа, передача) защищенных с использованием шифровальных средств информационных систем, систем и комплексов телекоммуникаций;</p>
+
+<p class="pfirst">– Техническое обслуживание (монтаж, наладка, установка, сервисное обслуживание, ремонт) информационных и телекоммуникационных систем органов государственной власти РФ;</p>
+
+<p class="pfirst">– Распространение (продажа, передача) информационных и телекоммуникационных систем органов государственной власти РФ;</p>
+
+<p class="pfirst">– Техническое обслуживание (монтаж, наладка, установка, сервисное обслуживание, ремонт) защищенных средств обработки информации, средств защиты информации (кроме криптографических), предназначенных для использования в органах государственной власти РФ;</p>
+
+<p class="pfirst">– Распространение (продажа, передача) защищенных средств обработки информации, средств защиты информации (кроме криптографических), предназначенных для использования в органах государственной власти РФ.</p>
+<a class="btn btn-primary btn-custom my-3" href="#special">Оставить заявку</a>
+<h1 class="h1first">Продажа готовых компаний с лицензиями ФСБ и ФСТЭК</h1>
+ </div>
+
+<div class="container" id="company">
+ <div class="table-responsive">
+ 	<table class="table table-borderless">
+  <thead>
+    <tr class="table-active">
+      <th>№ <br>
+	П/П</th>
+	<th>
+		Форма <br>
+собственности
+	</th>
+	<th>
+		Наличие  <br>
+оборотов
+	</th>
+	<th>
+		Год <br>
+создания
+	</th>
+	<th>
+		Лицензии <br>
+	</th>
+	<th>
+		Срок <br>
+действия
+	</th>
+	<th>
+		Цена(руб)
+
+	</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>1</td>
+      <td>ООО, <br>
+Москва</td>
+      <td>Да</td>
+      <td>2017</td>
+      <td>
+      	Лицензия ФСБ на работу со сведениями, составляющими гостайну
+
+
+
+      </td>
+      <td>
+      	Февраль 2027
+      	
+      </td>
+      <td>
+      	5 500 000
+      </td>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td>Лицензия ФСБ на оказание услуг в области защиты гостайны. Свое режимно-секретное подразделение</td>
+    	<td>Февраль 2027</td>
+    </tr>
+    <tr>
+    	<td>2</td>
+    	<td>ООО, <br>
+Москва</td>
+<td>Да</td>
+<td>2021</td>
+<td>Лицензия ФСБ на работу со сведениями, составляющими гостайну</td>
+<td>Ноябрь 2025</td>
+<td>3 200 000</td>
+    </tr>
+    <tr>
+    	<td>3</td>
+    	<td>ЗАО, <br>
+Московская область</td>
+<td>Да</td>
+<td>2001</td>
+<td>Лицензия ФСТЭК России на деятельность по технической защите конфиденциальной информации
+(все пункты кроме мониторинг)
+
+
+
+</td>
+<td>Бессрочно
+
+</td>
+<td>5 000 000</td>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td>Лицензия ФСТЭК России на деятельность по разработке и производству средств защиты конфиденциальной информации
+(все пункты)</td>
+<td>Бессрочно</td>
+<td></td>
+    </tr>
+  </tbody>
+</table>
+
+ </div>
+</div>
+    		</div>
+    		</div>
+<div class="container" id="special">
+	<h1 class="h1first">Заполните заявку онлайн</h1>
+	
+  <div class="row">
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput1" class="form-label"></label>
+    <input v-model="service" type="input" class="form-control input-custom" id="exampleInput1" placeholder="Какая услуга вас интересует?">
+  </div>
+
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInput4" class="form-label"></label>
+    <input v-model="name" type="input" class="form-control input-custom" id="exampleInput4" placeholder="Ваше имя*">
+  </div>
+ 
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputEmail1" class="form-label"></label>
+    <input v-model="email" type="email" class="form-control input-custom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail*">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3 col-md-6 col-12">
+    <label for="exampleInputphone1" class="form-label"></label>
+    <input v-model="phone" type="number" class="form-control input-custom" id="exampleInputphone1" aria-describedby="emailHelp" placeholder="Телефон">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail7" class="form-label"></label>
+    <textarea v-model="comment" class="form-control input-custom input-textarea" aria-label="With textarea" id="exampleInputEmail7" placeholder="Коментарий"></textarea>
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+   </div>
+  <div class="mb-3 form-check">
+    <input v-model="checked" type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Нажимая кнопку «ОТПРАВИТЬ ЗАЯВКУ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</label>
+  </div>
+  <button v-on:click="Sendemail" class="btn btn-primary btn-custom mt-2 mb-5 btn-footer" style="padding: 10px;">Оставить заявку</button>
+
+</div>
+<div id="contact"></div>
+<!--<div style="background: #21232F;" class="desktopfooter">
+<div class="container">
+<div class="row align-items-center">
+		<div class="col-6">
+			<img style="width: 100px;" class="py-3" src="img/Group 10255.png" alt="">
+		</div>
+		<div class="col-6 text-end py-5">
+			<a style="text-decoration: none;" class="text-white" href="tel:8(499)714-70-07">+7 (499) 714-70-07 </a>
+		</div>
+	</div>
+	<div class="row">
+		<hr style="background: white;">
+		<div class="col-6">
+			<div class="col menutext text-nowrap" style="margin-left: 0;">
+				<a style="color: #ffffff; font-weight: 300;" href="#license">Лицензии</a>
+			</div>
+			<div class="col menutext text-nowrap" style="margin-left: 0;">
+				<a style="color: #ffffff; font-weight: 300;" href="#company">Готовые фирмы</a>
+			</div>
+			<div class="col menutext text-nowrap" style="margin-left: 0;">
+				<a style="color: #ffffff; font-weight: 300;" href="#special">Специальные предложения</a>
+			</div>
+			<div class="col menutext text-nowrap" style="margin-left: 0;">
+				<a style="color: #ffffff; font-weight: 300;" href="#together">Сотрудничество</a>
+			</div>
+			<div class="col menutext text-nowrap" style="margin-left: 0;">
+				<a style="color: #ffffff; font-weight: 300;" href="#contact">Контакты</a>
+			</div>
+			<div class="col text-wrap" style="margin-left: 0;">
+				<p class="text-white" style="font-size: 0.6rem;">
+					© 2022 «ООО». Все права защищены законом об авторском праве.
+Копирование и использование любых информационных материалов размещенных на сайте ecert.ru разрешается только с письменного согласия руководства компании.
+				</p>
+			</div>
+		
+		</div>
+		<div class="col-6 text-end">
+			<div class="row">
+				<div class="col-4"></div>
+			<div class="col-8 text-end">
+			<div style="color: #ffffff; font-weight: 300;" class="menutext text-wrap mt-3 text-end">
+			Москва, 1410760, Даниловский переулок дом 5
+			</div>
+			<div style="color: #ffffff; font-weight: 300;" class="menutext text-wrap text-end">
+			
+			</div>
+			</div>
+			</div>
+			<div class="mt-4"></div>
+			<a class="btn btn-primary my-5" style="width: 200px; padding: 10px; color: black; background: white; border-radius: 15.3858px; border: 0.354952px solid white;" href="#special">Оставить заявку</a>
+			
+		</div>
+	</div>
+
+
+	</div>
+	</div>-->
+
+
+<!--<div style="background: #21232F; overflow-x: hidden;" class="mobilefooter">
+	<div class="row align-items-center">
+		<div class="col-6">
+			<img style="width: 100px; margin-left: 20px;" class="p-3" src="img/Group 10255.png" alt="">
+		</div>
+		<div class="col-6 text-center">
+			<a style="text-decoration: none;" class="text-white" href="tel:8(499)714-70-07">+7 (499) 714-70-07</a>
+		</div>
+
+	</div>	
+	<hr style="background: white;">
+	<div class="row">
+			<div class="col menutext text-nowrap">
+			<a style="color: #ffffff;" href="#license">Лицензии</a>
+			</div>
+			<div class="col mt-1 mx-4">
+				<div class="text-end" style="color: #ffffff;"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr style="background: white;">
+			<div style="color: #ffffff;" class="col menutext text-nowrap">
+			
+			<a style="color: #ffffff;" href="#company">Готовые фирмы</a>
+			</div>
+			<div class="col mt-1 mx-4">
+				<div class="text-end" style="color: #ffffff;"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr style="background: white;">
+			<div style="color: #ffffff;" class="col menutext text-nowrap">
+			
+			<a style="color: #ffffff;" href="#special">Специальные предложения</a>
+			</div>
+			<div class="col mt-1 mx-4">
+				<div class="text-end" style="color: #ffffff;"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr style="background: white;">
+			<div style="color: #ffffff;" class="col menutext text-nowrap">
+			
+			<a style="color: #ffffff;" href="#together">Сотрудничество</a>
+			</div>
+			<div class="col mt-1 mx-4">
+				<div class="text-end" style="color: #ffffff;"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr style="background: white;">
+			<div style="color: #ffffff;" class="col menutext text-nowrap">
+			
+			<a style="color: #ffffff;" href="#contact">Контакты</a>
+			</div>
+			<div class="col mt-1 mx-4">
+				<div class="text-end" style="color: #ffffff;"><i class="fa-solid fa-angle-down"></i></div>
+				
+			</div>
+			<hr style="background: white;">
+			<div style="color: #ffffff;" class="col menutext text-wrap mt-3">
+			Москва, 1410760, Даниловский переулок дом 5
+			</div>
+			<div style="color: #ffffff;" class="menutext text-wrap">
+			
+			</div>
+		
+				
+			
+			<div class="col menutext">
+				<a href="#special" class="btn btn-primary my-5" style="width: 95%; padding: 15px; color: black; background: white; border-radius: 23.3858px; border: 0.354952px solid white;">Оставить заявку</a>
+				<p class="text-white" style="font-size: 0.6rem; line-height: 0.9rem; font-weight: 400;">© 2022 «ООО». Все права защищены законом об авторском праве.
+Копирование и использование любых информационных материалов размещенных на сайте ecert.ru разрешается только с письменного согласия руководства компании. </p>
+			</div>
+		</div>
+</div>-->
+
+<!-- vue js компоненты -->
+
+<footer-desktop></footer-desktop>
+
+<footer-mobile></footer-mobile>
+
+<!-- vue js компоненты -->
+
+    </div>
+    <script src="js/axios/dist/axios.min.js"></script>
+    <script src="js/bootstrap5.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89546646, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89546646" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  </body>
+</html>
